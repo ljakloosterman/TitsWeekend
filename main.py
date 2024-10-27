@@ -39,5 +39,9 @@ def main():
             delta=f"€ {total_pp[tit] - goal_pp},-",
             delta_color="inverse")
 
+    # Show table
+    st.markdown("### Transacties")
+    st.dataframe(data)
+
 if __name__ == "__main__":
     main()
