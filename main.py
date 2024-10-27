@@ -33,11 +33,11 @@ def main():
     # Show individual metrics
     st.markdown("### Individueel gepayerd")
     for tit in data.columns:
+        delta = total_pp[tit] - goal_pp
         st.metric(
             label=tit,
             value=f"€ {total_pp[tit]},-",
-            delta=f"€ {total_pp[tit] - goal_pp},-",
-            delta_color="inverse")
+            delta=float(delta))
 
     # Show table
     st.markdown("### Transacties")
