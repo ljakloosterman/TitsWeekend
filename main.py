@@ -115,10 +115,6 @@ def main():
                 )
 
         with col3:
-            # if st.button("Betalen met je bek", key=f"button_{tit}"):
-            #     add_transaction(transactions, tit, value)
-            #     st.link_button("Tik hem af", link)
-
             if st.button('Betalen met je bek', on_click=open_page, key=f"button_{tit}"):
                 add_transaction(transactions, tit, value)
 
