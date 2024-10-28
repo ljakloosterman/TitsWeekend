@@ -1,6 +1,5 @@
 """Script to show payment progress"""
 import datetime
-import webbrowser
 import pandas as pd
 import streamlit as st
 
@@ -13,9 +12,7 @@ def get_months():
 
     # Get months until october 2025
     end = datetime.datetime(2025, 10, 1)
-    months = (end.year - today.year) * 12 + end.month - today.month
-
-    return months
+    return (end.year - today.year) * 12 + end.month - today.month
 
 
 def add_transaction(transactions, tit, value):
@@ -76,7 +73,7 @@ def main():
 
     # Show total progressbar
     st.markdown("### Totaal gepayerd")
-    st.progress(total/goal, f"{(total/goal)*100:.2f}% ingelegd")
+    st.progress(total/goal, f"€ {total},- ingelegd")
 
     # Show individual metrics
     st.markdown("### Individueel gepayerd")
@@ -103,7 +100,6 @@ def main():
                 min_value=50.0,
                 max_value=600.0
                 )
-            
 
         with col3:
             if st.button("Betalen met je bek", key=f"button_{tit}"):
