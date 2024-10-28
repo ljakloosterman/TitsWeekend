@@ -18,6 +18,13 @@ def get_months():
     return months
 
 
+def nav_to(url):
+    nav_script = """
+        <meta http-equiv="refresh" content="0; url='%s'">
+    """ % (url)
+    st.write(nav_script, unsafe_allow_html=True)
+
+
 def add_transaction(transactions, tit, value):
     """Adds transaction and updates json"""
 
@@ -109,7 +116,8 @@ def main():
             if st.button("Betalen met je bek", key=f"button_{tit}"):
 
                 # Open new tab
-                webbrowser.open_new_tab(link)
+                # webbrowser.open_new_tab(link)
+                nav_to(link)
 
                 # Add transaction
                 add_transaction(transactions, tit, value)
