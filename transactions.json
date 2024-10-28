@@ -1,0 +1,32 @@
+[
+    {
+        "Datum":"2024-10-25",
+        "Tit":"Michiel",
+        "Bedrag":50.0
+    },
+    {
+        "Datum":"2024-10-25",
+        "Tit":"Yasper",
+        "Bedrag":50.0
+    },
+    {
+        "Datum":"2024-10-25",
+        "Tit":"Vincent",
+        "Bedrag":50.0
+    },
+    {
+        "Datum":"2024-10-25",
+        "Tit":"Gijs",
+        "Bedrag":600.0
+    },
+    {
+        "Datum":"2024-10-25",
+        "Tit":"Luc",
+        "Bedrag":50.0
+    },
+    {
+        "Datum":"2024-10-28",
+        "Tit":"Sam",
+        "Bedrag":50.0
+    }
+]
