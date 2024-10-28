@@ -109,10 +109,10 @@ def main():
             if st.button("Betalen met je bek", key=f"button_{tit}"):
 
                 # Open new tab
-                webbrowser.open(link, new=2)
+                webbrowser.open_new_tab(link, new=2)
 
                 # Add transaction
-                add_transaction(transactions, tit, value) 
+                add_transaction(transactions, tit, value)
 
         # Divider for clarity
         st.divider()
