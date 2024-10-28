@@ -3,6 +3,19 @@ import datetime
 import pandas as pd
 import streamlit as st
 
+from streamlit.components.v1 import html
+
+
+def open_page():
+    url = "https://www.ing.nl/payreq/m/?trxid=qHXrcxrMH5kKrcKxMOcPTjOPXWWaVAvT"
+
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
+
 
 def get_months():
     """Get months until october 2025"""
@@ -102,9 +115,12 @@ def main():
                 )
 
         with col3:
-            if st.button("Betalen met je bek", key=f"button_{tit}"):
+            # if st.button("Betalen met je bek", key=f"button_{tit}"):
+            #     add_transaction(transactions, tit, value)
+            #     st.link_button("Tik hem af", link)
+
+            if st.button('Betalen met je bek', on_click=open_page, key=f"button_{tit}"):
                 add_transaction(transactions, tit, value)
-                st.link_button("Tik hem af", link)
 
         # Divider for clarity
         st.divider()
