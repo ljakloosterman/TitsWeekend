@@ -71,9 +71,6 @@ def main():
         "Luc"
         ]
 
-    # payment link
-    link = "https://www.ing.nl/payreq/m/?trxid=qHXrcxrMH5kKrcKxMOcPTjOPXWWaVAvT"
-
     # Set goals
     goal_pp = (13 - months) * 50
     goal = 12*50*len(tits)
